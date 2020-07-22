@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="19" passed="17">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Global Kinetic Assessment - Task 1, Task 2 &amp; Task 3" duration-ms="83092" started-at="2020-07-22T17:09:57Z" finished-at="2020-07-22T17:11:20Z">
+    <groups>
+    </groups>
+    <test name="Gradle test" duration-ms="83092" started-at="2020-07-22T17:09:57Z" finished-at="2020-07-22T17:11:20Z">
+      <class name="testSuites.TaskOneTest">
+        <test-method status="PASS" signature="startEngine()[pri:0, instance:testSuites.TaskOneTest@4dac078e]" name="startEngine" is-config="true" duration-ms="3693" started-at="2020-07-22T17:09:57Z" finished-at="2020-07-22T17:10:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startEngine -->
+        <test-method status="PASS" signature="NavigateToUrl()[pri:0, instance:testSuites.TaskOneTest@4dac078e]" name="NavigateToUrl" duration-ms="15119" started-at="2020-07-22T17:10:01Z" finished-at="2020-07-22T17:10:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToUrl -->
+        <test-method status="PASS" signature="ValidateUserListTable()[pri:1, instance:testSuites.TaskOneTest@4dac078e]" name="ValidateUserListTable" duration-ms="289" started-at="2020-07-22T17:10:16Z" finished-at="2020-07-22T17:10:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateUserListTable -->
+        <test-method status="PASS" signature="ClickAddUser()[pri:2, instance:testSuites.TaskOneTest@4dac078e]" name="ClickAddUser" duration-ms="748" started-at="2020-07-22T17:10:17Z" finished-at="2020-07-22T17:10:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickAddUser -->
+        <test-method status="PASS" signature="AddUsersToTable()[pri:3, instance:testSuites.TaskOneTest@4dac078e]" name="AddUsersToTable" duration-ms="7857" started-at="2020-07-22T17:10:17Z" finished-at="2020-07-22T17:10:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddUsersToTable -->
+        <test-method status="PASS" signature="ValidateUserNameIsUnique()[pri:4, instance:testSuites.TaskOneTest@4dac078e]" name="ValidateUserNameIsUnique" duration-ms="7" started-at="2020-07-22T17:10:25Z" finished-at="2020-07-22T17:10:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateUserNameIsUnique -->
+        <test-method status="PASS" signature="ValidateUserAreAddedToList()[pri:5, instance:testSuites.TaskOneTest@4dac078e]" name="ValidateUserAreAddedToList" duration-ms="134" started-at="2020-07-22T17:10:25Z" finished-at="2020-07-22T17:10:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateUserAreAddedToList -->
+      </class> <!-- testSuites.TaskOneTest -->
+      <class name="testSuites.TaskTwoTest">
+        <test-method status="PASS" signature="startEngine()[pri:0, instance:testSuites.TaskTwoTest@7fdee1df]" name="startEngine" is-config="true" duration-ms="68" started-at="2020-07-22T17:10:25Z" finished-at="2020-07-22T17:10:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startEngine -->
+        <test-method status="PASS" signature="OpenUAMPApp()[pri:6, instance:testSuites.TaskTwoTest@7fdee1df]" name="OpenUAMPApp" duration-ms="27984" started-at="2020-07-22T17:10:25Z" finished-at="2020-07-22T17:10:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenUAMPApp -->
+        <test-method status="PASS" signature="ValidateHomePage()[pri:7, instance:testSuites.TaskTwoTest@7fdee1df]" name="ValidateHomePage" duration-ms="9553" started-at="2020-07-22T17:10:53Z" finished-at="2020-07-22T17:11:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateHomePage -->
+        <test-method status="PASS" signature="NavigateToRecommended()[pri:8, instance:testSuites.TaskTwoTest@7fdee1df]" name="NavigateToRecommended" duration-ms="1833" started-at="2020-07-22T17:11:03Z" finished-at="2020-07-22T17:11:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToRecommended -->
+        <test-method status="PASS" signature="PlayJazzInParis()[pri:9, instance:testSuites.TaskTwoTest@7fdee1df]" name="PlayJazzInParis" duration-ms="741" started-at="2020-07-22T17:11:05Z" finished-at="2020-07-22T17:11:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PlayJazzInParis -->
+      </class> <!-- testSuites.TaskTwoTest -->
+      <class name="testSuites.TaskThreeTest">
+        <test-method status="PASS" signature="startEngine()[pri:0, instance:testSuites.TaskThreeTest@5768d8d]" name="startEngine" is-config="true" duration-ms="108" started-at="2020-07-22T17:11:06Z" finished-at="2020-07-22T17:11:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startEngine -->
+        <test-method status="PASS" signature="GetListOfAllBreeds()[pri:10, instance:testSuites.TaskThreeTest@5768d8d]" name="GetListOfAllBreeds" duration-ms="4991" started-at="2020-07-22T17:11:06Z" finished-at="2020-07-22T17:11:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetListOfAllBreeds -->
+        <test-method status="PASS" signature="VerifyRetriever()[pri:11, instance:testSuites.TaskThreeTest@5768d8d]" name="VerifyRetriever" duration-ms="3122" started-at="2020-07-22T17:11:11Z" finished-at="2020-07-22T17:11:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyRetriever -->
+        <test-method status="PASS" signature="GetListOfSubBreeds()[pri:12, instance:testSuites.TaskThreeTest@5768d8d]" name="GetListOfSubBreeds" duration-ms="1192" started-at="2020-07-22T17:11:14Z" finished-at="2020-07-22T17:11:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetListOfSubBreeds -->
+        <test-method status="PASS" signature="GetImageRandom()[pri:13, instance:testSuites.TaskThreeTest@5768d8d]" name="GetImageRandom" duration-ms="1132" started-at="2020-07-22T17:11:15Z" finished-at="2020-07-22T17:11:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetImageRandom -->
+        <test-method status="PASS" signature="GetListOfHoundSubBreeds()[pri:14, instance:testSuites.TaskThreeTest@5768d8d]" name="GetListOfHoundSubBreeds" duration-ms="1047" started-at="2020-07-22T17:11:16Z" finished-at="2020-07-22T17:11:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetListOfHoundSubBreeds -->
+        <test-method status="PASS" signature="GetListAllSubBreedImage()[pri:15, instance:testSuites.TaskThreeTest@5768d8d]" name="GetListAllSubBreedImage" duration-ms="1021" started-at="2020-07-22T17:11:17Z" finished-at="2020-07-22T17:11:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GetListAllSubBreedImage -->
+        <test-method status="PASS" signature="Login()[pri:16, instance:testSuites.TaskThreeTest@5768d8d]" name="Login" duration-ms="2134" started-at="2020-07-22T17:11:18Z" finished-at="2020-07-22T17:11:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testSuites.TaskThreeTest@5768d8d]" name="tearDown" is-config="true" duration-ms="3784" started-at="2020-07-22T17:11:21Z" finished-at="2020-07-22T17:11:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testSuites.TaskThreeTest -->
+    </test> <!-- Gradle test -->
+  </suite> <!-- Global Kinetic Assessment - Task 1, Task 2 & Task 3 -->
+</testng-results>

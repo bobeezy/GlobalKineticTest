@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testSuites.TaskTwoTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-07-22T17:10:25" hostname="Lionel-Mangoua.local" time="40.118">
+  <properties/>
+  <testcase name="OpenUAMPApp" classname="testSuites.TaskTwoTest" time="27.984"/>
+  <testcase name="ValidateHomePage" classname="testSuites.TaskTwoTest" time="9.553"/>
+  <testcase name="NavigateToRecommended" classname="testSuites.TaskTwoTest" time="1.833"/>
+  <testcase name="PlayJazzInParis" classname="testSuites.TaskTwoTest" time="0.741"/>
+  <system-out><![CDATA[Found element by Xpath : //android.widget.TextView[@text='Recommended']
+Clicked element by Xpath : //android.widget.TextView[@text='Recommended']
+Found element by Xpath : //android.widget.TextView[@text='Jazz in Paris']
+Clicked element by Xpath : //android.widget.TextView[@text='Jazz in Paris']
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO main.java.Engine.DriverFactory - Setup .xlsx File Path: 'src/main/resources/excels/UserData.xlsx' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Setup Base URL successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Mobile test is Starting ... 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Local App driver directory - /Users/lionel.mangoua/Documents/Projects/Java/globalkinetic_test/GlobalKineticTest/src/main/resources/mobile/app-debug.apk
+[Test worker] INFO main.java.Engine.DriverFactory - Device is: 'emulator'
+[Test worker] INFO main.java.Engine.DriverFactory - Driver = 0.0.0.0:4723/wd/hub 
+
+Jul 22, 2020 7:10:53 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFO: Detected dialect: W3C
+[Test worker] INFO main.java.Engine.DriverFactory - Android on local machine initiated 
+
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== OpenUAMPApp test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - Found element by Xpath: //android.widget.TextView[@text='UAMP']
+[Test worker] INFO main.java.Engine.DriverFactory - Found element by Xpath: //android.widget.TextView[@text='Recommended']
+[Test worker] INFO main.java.Engine.DriverFactory - Found element by Xpath: //android.widget.TextView[@text='Albums']
+[Test worker] INFO main.java.Engine.DriverFactory - Validate Home Page executed successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== ValidateHomePage test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - Found element by Xpath: //android.widget.TextView[@text='Jazz in Paris']
+[Test worker] INFO main.java.Engine.DriverFactory - Select 'Recommended' executed successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== NavigateToRecommended test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - Play 'Jazz in Paris' executed successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== PlayJazzInParis test executed successfully ===============
+
+]]></system-err>
+</testsuite>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testSuites.TaskOneTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2020-07-22T17:10:01" hostname="Lionel-Mangoua.local" time="24.352">
+  <properties/>
+  <testcase name="NavigateToUrl" classname="testSuites.TaskOneTest" time="15.119"/>
+  <testcase name="ValidateUserListTable" classname="testSuites.TaskOneTest" time="0.289"/>
+  <testcase name="ClickAddUser" classname="testSuites.TaskOneTest" time="0.748"/>
+  <testcase name="AddUsersToTable" classname="testSuites.TaskOneTest" time="7.857"/>
+  <testcase name="ValidateUserNameIsUnique" classname="testSuites.TaskOneTest" time="0.007"/>
+  <testcase name="ValidateUserAreAddedToList" classname="testSuites.TaskOneTest" time="0.134"/>
+  <system-out><![CDATA[Gecko driver directory - /Users/lionel.mangoua/Documents/Projects/Java/globalkinetic_test/GlobalKineticTest/src/main/resources/web/geckodriver
+Found element by Xpath : //tr//span[contains(text(), 'First Name')]/../..//span[contains(text(), 'Last Name')]/../..//span[contains(text(), 'User Name')]/../..//span[contains(text(), 'Customer')]/../..//span[contains(text(), 'Role')]/../..//span[contains(text(), 'E-mail')]/../..//span[contains(text(), 'Cell Phone')]/../..//span[contains(text(), 'Locked')]
+Found element by Xpath : //button[contains(text(), 'Add User')]
+Found element by Xpath : //button[contains(text(), 'Add User')]
+Clicked element by Xpath : //button[contains(text(), 'Add User')]
+Found element by Xpath : //input[@name='FirstName']
+Cleared text on element by Xpath : //input[@name='FirstName']
+Found element by Xpath : //input[@name='FirstName']
+Entered text : "FName1" to : //input[@name='FirstName']
+Found element by Xpath : //input[@name='LastName']
+Cleared text on element by Xpath : //input[@name='LastName']
+Found element by Xpath : //input[@name='LastName']
+Entered text : "LName1" to : //input[@name='LastName']
+Found element by Xpath : //input[@name='UserName']
+Cleared text on element by Xpath : //input[@name='UserName']
+Found element by Xpath : //input[@name='UserName']
+Entered text : "User1" to : //input[@name='UserName']
+Found element by Xpath : //input[@name='Password']
+Cleared text on element by Xpath : //input[@name='Password']
+Found element by Xpath : //input[@name='Password']
+Entered text : "Pass1" to : //input[@name='Password']
+Found element by Xpath : //label[normalize-space()='Company AAA']/input[@type='radio']
+Clicked element by Xpath : //label[normalize-space()='Company AAA']/input[@type='radio']
+Found element by Xpath : //select[@name='RoleId']
+Selected Text : Admin from : //select[@name='RoleId']
+Found element by Xpath : //input[@name='Email']
+Cleared text on element by Xpath : //input[@name='Email']
+Found element by Xpath : //input[@name='Email']
+Entered text : "admin@mail.com" to : //input[@name='Email']
+Found element by Xpath : //input[@name='Mobilephone']
+Cleared text on element by Xpath : //input[@name='Mobilephone']
+Found element by Xpath : //input[@name='Mobilephone']
+Entered text : "082555" to : //input[@name='Mobilephone']
+Found element by Xpath : //button[contains(text(), 'Save')]
+Clicked element by Xpath : //button[contains(text(), 'Save')]
+Found element by Xpath : //button[contains(text(), 'Add User')]
+Clicked element by Xpath : //button[contains(text(), 'Add User')]
+Found element by Xpath : //input[@name='FirstName']
+Cleared text on element by Xpath : //input[@name='FirstName']
+Found element by Xpath : //input[@name='FirstName']
+Entered text : "FName2" to : //input[@name='FirstName']
+Found element by Xpath : //input[@name='LastName']
+Cleared text on element by Xpath : //input[@name='LastName']
+Found element by Xpath : //input[@name='LastName']
+Entered text : "LName2" to : //input[@name='LastName']
+Found element by Xpath : //input[@name='UserName']
+Cleared text on element by Xpath : //input[@name='UserName']
+Found element by Xpath : //input[@name='UserName']
+Entered text : "User2" to : //input[@name='UserName']
+Found element by Xpath : //input[@name='Password']
+Cleared text on element by Xpath : //input[@name='Password']
+Found element by Xpath : //input[@name='Password']
+Entered text : "Pass2" to : //input[@name='Password']
+Found element by Xpath : //label[normalize-space()='Company BBB']/input[@type='radio']
+Clicked element by Xpath : //label[normalize-space()='Company BBB']/input[@type='radio']
+Found element by Xpath : //select[@name='RoleId']
+Selected Text : Customer from : //select[@name='RoleId']
+Found element by Xpath : //input[@name='Email']
+Cleared text on element by Xpath : //input[@name='Email']
+Found element by Xpath : //input[@name='Email']
+Entered text : "customer@mail.com" to : //input[@name='Email']
+Found element by Xpath : //input[@name='Mobilephone']
+Cleared text on element by Xpath : //input[@name='Mobilephone']
+Found element by Xpath : //input[@name='Mobilephone']
+Entered text : "083444" to : //input[@name='Mobilephone']
+Found element by Xpath : //button[contains(text(), 'Save')]
+Clicked element by Xpath : //button[contains(text(), 'Save')]
+Found element by Xpath : //td[contains(text(), 'FName1')]/..//td[contains(text(), 'LName1')]/..//td[contains(text(), 'User1')]/..//td[contains(text(), 'Admin')]/..//td[contains(text(), 'admin@mail.com')]/..//td[contains(text(), '082555')]
+Found element by Xpath : //td[contains(text(), 'FName2')]/..//td[contains(text(), 'LName2')]/..//td[contains(text(), 'User2')]/..//td[contains(text(), 'Customer')]/..//td[contains(text(), 'customer@mail.com')]/..//td[contains(text(), '083444')]
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO main.java.Engine.DriverFactory - Setup .xlsx File Path: 'src/main/resources/excels/UserData.xlsx' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Setup Base URL successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Web test is Starting ... 
+
+1595437803883	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/1j/c339qb851_qfln904lgjh56r0000gp/T/rust_mozprofileMGnVN0"
+1595437810195	Marionette	INFO	Listening on port 64007
+1595437810465	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jul 22, 2020 7:10:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[Test worker] INFO main.java.Engine.DriverFactory - Firefox on local machine initiated 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Launched Browser successfully
+JavaScript warning: http://code.angularjs.org/1.2.0rc1/angular.min.js, line 184: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+[Test worker] INFO main.java.Engine.DriverFactory - Navigated to http://www.way2automation.com/angularjs-protractor/webtables/ successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== NavigateToUrl test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - Validated User List Table successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== ValidateUserListTable test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - Clicked 'Add User' button successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== ClickAddUser test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - Get specific data for test case: 'User1' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Setup test data for test 'User1' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Added User #1 To Table successfully
+
+[Test worker] INFO main.java.Engine.DriverFactory - Get specific data for test case: 'User2' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Setup test data for test 'User2' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Added User #2 To Table successfully
+
+[Test worker] INFO main.java.Engine.DriverFactory - Added Users To Table successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== AddUsersToTable test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - The first user name User1 is Unique
+[Test worker] INFO main.java.Engine.DriverFactory - The second user name User2 is Unique
+[Test worker] INFO main.java.Engine.DriverFactory - Validated User Name Is Unique successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== ValidateUserNameIsUnique test executed successfully ===============
+
+[Test worker] INFO main.java.Engine.DriverFactory - Get specific data for test case: 'User1' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Setup test data for test 'User1' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Validated User1 Is Added To List successfully
+[Test worker] INFO main.java.Engine.DriverFactory - Get specific data for test case: 'User2' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Setup test data for test 'User2' successfully 
+
+[Test worker] INFO main.java.Engine.DriverFactory - Validated User2 Is Added To List successfully
+[Test worker] INFO main.java.Engine.DriverFactory - Validated Users Are Added To List successfully
+[Test worker] INFO main.java.Engine.DriverFactory - 
+=============== ValidateUserAreAddedToList test executed successfully ===============
+
+]]></system-err>
+</testsuite>

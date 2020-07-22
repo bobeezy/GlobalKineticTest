@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>TestNG:  Gradle test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Gradle test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jul 22 19:09:57 SAST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>83 seconds (83092 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testSuites.TaskOneTest.AddUsersToTable()'><b>AddUsersToTable</b><br>Test class: testSuites.TaskOneTest</td>
+<td></td>
+<td>7</td>
+<td>testSuites.TaskOneTest@4dac078e</td></tr>
+<tr>
+<td title='testSuites.TaskOneTest.ClickAddUser()'><b>ClickAddUser</b><br>Test class: testSuites.TaskOneTest</td>
+<td></td>
+<td>0</td>
+<td>testSuites.TaskOneTest@4dac078e</td></tr>
+<tr>
+<td title='testSuites.TaskThreeTest.GetImageRandom()'><b>GetImageRandom</b><br>Test class: testSuites.TaskThreeTest</td>
+<td></td>
+<td>1</td>
+<td>testSuites.TaskThreeTest@5768d8d</td></tr>
+<tr>
+<td title='testSuites.TaskThreeTest.GetListAllSubBreedImage()'><b>GetListAllSubBreedImage</b><br>Test class: testSuites.TaskThreeTest</td>
+<td></td>
+<td>1</td>
+<td>testSuites.TaskThreeTest@5768d8d</td></tr>
+<tr>
+<td title='testSuites.TaskThreeTest.GetListOfAllBreeds()'><b>GetListOfAllBreeds</b><br>Test class: testSuites.TaskThreeTest</td>
+<td></td>
+<td>4</td>
+<td>testSuites.TaskThreeTest@5768d8d</td></tr>
+<tr>
+<td title='testSuites.TaskThreeTest.GetListOfHoundSubBreeds()'><b>GetListOfHoundSubBreeds</b><br>Test class: testSuites.TaskThreeTest</td>
+<td></td>
+<td>1</td>
+<td>testSuites.TaskThreeTest@5768d8d</td></tr>
+<tr>
+<td title='testSuites.TaskThreeTest.GetListOfSubBreeds()'><b>GetListOfSubBreeds</b><br>Test class: testSuites.TaskThreeTest</td>
+<td></td>
+<td>1</td>
+<td>testSuites.TaskThreeTest@5768d8d</td></tr>
+<tr>
+<td title='testSuites.TaskThreeTest.Login()'><b>Login</b><br>Test class: testSuites.TaskThreeTest</td>
+<td></td>
+<td>2</td>
+<td>testSuites.TaskThreeTest@5768d8d</td></tr>
+<tr>
+<td title='testSuites.TaskTwoTest.NavigateToRecommended()'><b>NavigateToRecommended</b><br>Test class: testSuites.TaskTwoTest</td>
+<td></td>
+<td>1</td>
+<td>testSuites.TaskTwoTest@7fdee1df</td></tr>
+<tr>
+<td title='testSuites.TaskOneTest.NavigateToUrl()'><b>NavigateToUrl</b><br>Test class: testSuites.TaskOneTest</td>
+<td></td>
+<td>15</td>
+<td>testSuites.TaskOneTest@4dac078e</td></tr>
+<tr>
+<td title='testSuites.TaskTwoTest.OpenUAMPApp()'><b>OpenUAMPApp</b><br>Test class: testSuites.TaskTwoTest</td>
+<td></td>
+<td>27</td>
+<td>testSuites.TaskTwoTest@7fdee1df</td></tr>
+<tr>
+<td title='testSuites.TaskTwoTest.PlayJazzInParis()'><b>PlayJazzInParis</b><br>Test class: testSuites.TaskTwoTest</td>
+<td></td>
+<td>0</td>
+<td>testSuites.TaskTwoTest@7fdee1df</td></tr>
+<tr>
+<td title='testSuites.TaskTwoTest.ValidateHomePage()'><b>ValidateHomePage</b><br>Test class: testSuites.TaskTwoTest</td>
+<td></td>
+<td>9</td>
+<td>testSuites.TaskTwoTest@7fdee1df</td></tr>
+<tr>
+<td title='testSuites.TaskOneTest.ValidateUserAreAddedToList()'><b>ValidateUserAreAddedToList</b><br>Test class: testSuites.TaskOneTest</td>
+<td></td>
+<td>0</td>
+<td>testSuites.TaskOneTest@4dac078e</td></tr>
+<tr>
+<td title='testSuites.TaskOneTest.ValidateUserListTable()'><b>ValidateUserListTable</b><br>Test class: testSuites.TaskOneTest</td>
+<td></td>
+<td>0</td>
+<td>testSuites.TaskOneTest@4dac078e</td></tr>
+<tr>
+<td title='testSuites.TaskOneTest.ValidateUserNameIsUnique()'><b>ValidateUserNameIsUnique</b><br>Test class: testSuites.TaskOneTest</td>
+<td></td>
+<td>0</td>
+<td>testSuites.TaskOneTest@4dac078e</td></tr>
+<tr>
+<td title='testSuites.TaskThreeTest.VerifyRetriever()'><b>VerifyRetriever</b><br>Test class: testSuites.TaskThreeTest</td>
+<td></td>
+<td>3</td>
+<td>testSuites.TaskThreeTest@5768d8d</td></tr>
+</table><p>
+</body>
+</html>
