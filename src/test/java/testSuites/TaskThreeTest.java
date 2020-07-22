@@ -27,7 +27,7 @@ public class TaskThreeTest extends DriverFactory {
     @Features("Global Kinetic Task 3")
     @Description("Perform an API request to produce a list of all dog breeds")
     @Stories("Task 3.a")
-    @Test
+    @Test(priority = 10)
     public void GetListOfAllBreeds() {
 
         response = taskOne.getListOfAllBreeds();
@@ -39,7 +39,7 @@ public class TaskThreeTest extends DriverFactory {
     @Features("Global Kinetic Task 3")
     @Description("Verify “retriever” breed is within the list")
     @Stories("Task 3.b")
-    @Test
+    @Test(priority = 11)
     public void VerifyRetriever() {
 
         response = taskOne.getListOfAllBreeds();
@@ -51,7 +51,7 @@ public class TaskThreeTest extends DriverFactory {
     @Features("Global Kinetic Task 3")
     @Description("Perform an API request to produce a list of sub-breeds for “retriever”")
     @Stories("Task 3.c")
-    @Test
+    @Test(priority = 12)
     public void GetListOfSubBreeds() {
 
         response = taskOne.getListOfSubBreeds();
@@ -63,7 +63,7 @@ public class TaskThreeTest extends DriverFactory {
     @Features("Global Kinetic Task 3")
     @Description("Perform an API request to random image/link for the sub-breed “golden”")
     @Stories("Task 3.d")
-    @Test
+    @Test(priority = 13)
     public void GetImageRandom() {
 
         response = taskOne.getImageRandom();
@@ -75,7 +75,7 @@ public class TaskThreeTest extends DriverFactory {
     @Features("Global Kinetic Task 3")
     @Description("Perform an API request to produce a list of sub-breeds for “hound”")
     @Stories("Task 3.e")
-    @Test
+    @Test(priority = 14)
     public void GetListOfHoundSubBreeds() {
 
         response = taskOne.getListOfHoundSubBreeds("hound");
@@ -89,7 +89,7 @@ public class TaskThreeTest extends DriverFactory {
     @Features("Global Kinetic Task 3")
     @Description("Perform an API request to list all sub-breed images for the sub-breed “afghan”")
     @Stories("Task 3.f")
-    @Test
+    @Test(priority = 15)
     public void GetListAllSubBreedImage() {
 
         afghanDog = subBreedList.get(0).toString();
@@ -103,7 +103,7 @@ public class TaskThreeTest extends DriverFactory {
     @Features("Global Kinetic Task 3")
     @Description("Perform an API Post request to Login")
     @Stories("Task 3.g")
-    @Test
+    @Test(priority = 16)
     public void Login() {
 
         setEnv.setTestEnvironment("login"); //set up environment
