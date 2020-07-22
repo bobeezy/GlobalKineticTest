@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1595437797799" stop="1595437880913">
+    <name>Global Kinetic Assessment - Task 1, Task 2 &amp; Task 3</name>
+    <test-cases>
+        <test-case start="1595437801550" stop="1595437816657" status="passed">
+            <name>NavigateToUrl</name>
+            <description type="text">* Navigate to link</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 1.a"/>
+                <label name="feature" value="Global Kinetic Task 1"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437816835" stop="1595437817125" status="passed">
+            <name>ValidateUserListTable</name>
+            <description type="text">* Validate that you are on the User List Table</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 1.b"/>
+                <label name="feature" value="Global Kinetic Task 1"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437817134" stop="1595437817882" status="passed">
+            <name>ClickAddUser</name>
+            <description type="text">* Click Add user</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 1.c"/>
+                <label name="feature" value="Global Kinetic Task 1"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437817884" stop="1595437825741" status="passed">
+            <name>AddUsersToTable</name>
+            <description type="text">* Add users</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 1.d"/>
+                <label name="feature" value="Global Kinetic Task 1"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437825744" stop="1595437825751" status="passed">
+            <name>ValidateUserNameIsUnique</name>
+            <description type="text">* Ensure that User Name is unique on each run</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 1.e"/>
+                <label name="feature" value="Global Kinetic Task 1"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437825753" stop="1595437825887" status="passed">
+            <name>ValidateUserAreAddedToList</name>
+            <description type="text">* Ensure that your users are added to the list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 1.f"/>
+                <label name="feature" value="Global Kinetic Task 1"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437825957" stop="1595437853941" status="passed">
+            <name>OpenUAMPApp</name>
+            <description type="text">* Open UAMP Mobile App</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 2.a"/>
+                <label name="feature" value="Global Kinetic Task 2"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437853943" stop="1595437863496" status="passed">
+            <name>ValidateHomePage</name>
+            <description type="text">* Validate The Home Page</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 2.b"/>
+                <label name="feature" value="Global Kinetic Task 2"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437863498" stop="1595437865331" status="passed">
+            <name>NavigateToRecommended</name>
+            <description type="text">* Navigate to 'Recommended'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 2.c"/>
+                <label name="feature" value="Global Kinetic Task 2"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437865334" stop="1595437866075" status="passed">
+            <name>PlayJazzInParis</name>
+            <description type="text">* Play 'Jazz in Paris'</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 2.d"/>
+                <label name="feature" value="Global Kinetic Task 2"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437866187" stop="1595437871177" status="passed">
+            <name>GetListOfAllBreeds</name>
+            <description type="text">Perform an API request to produce a list of all dog breeds</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 3.a"/>
+                <label name="feature" value="Global Kinetic Task 3"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437871216" stop="1595437874338" status="passed">
+            <name>VerifyRetriever</name>
+            <description type="text">Verify “retriever” breed is within the list</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 3.b"/>
+                <label name="feature" value="Global Kinetic Task 3"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437874342" stop="1595437875534" status="passed">
+            <name>GetListOfSubBreeds</name>
+            <description type="text">Perform an API request to produce a list of sub-breeds for “retriever”</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 3.c"/>
+                <label name="feature" value="Global Kinetic Task 3"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437875537" stop="1595437876669" status="passed">
+            <name>GetImageRandom</name>
+            <description type="text">Perform an API request to random image/link for the sub-breed “golden”</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 3.d"/>
+                <label name="feature" value="Global Kinetic Task 3"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437876674" stop="1595437877720" status="passed">
+            <name>GetListOfHoundSubBreeds</name>
+            <description type="text">Perform an API request to produce a list of sub-breeds for “hound”</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 3.e"/>
+                <label name="feature" value="Global Kinetic Task 3"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437877723" stop="1595437878744" status="passed">
+            <name>GetListAllSubBreedImage</name>
+            <description type="text">Perform an API request to list all sub-breed images for the sub-breed “afghan”</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 3.f"/>
+                <label name="feature" value="Global Kinetic Task 3"/>
+            </labels>
+        </test-case>
+        <test-case start="1595437878747" stop="1595437880881" status="passed">
+            <name>Login</name>
+            <description type="text">Perform an API Post request to Login</description>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="Task 3.g"/>
+                <label name="feature" value="Global Kinetic Task 3"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels/>
+</ns2:test-suite>
