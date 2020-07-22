@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Task Three - API" verbose="1">
+    <!--    API    -->
+    <test name="Task Three">
+        <classes>
+            <class name="testSuites.TaskThreeTest">
+                <methods>
+                    <include name="GetListOfAllBreeds"/>
+                    <include name="VerifyRetriever"/>
+                    <include name="GetListOfSubBreeds"/>
+                    <include name="GetImageRandom"/>
+                    <include name="GetListOfHoundSubBreeds"/>
+                    <include name="GetListAllSubBreedImage"/>
+                    <include name="Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,293 @@
+buildscript {
+
+    println('-' * 80)
+    println('Environment variables at startup:')
+    System.env.each { k, v ->
+        println("$k = $v")
+    }
+    println('-' * 80)
+
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.5"//Allure settings
+    }
+}
+
+plugins {
+    id 'java'
+    id 'net.researchgate.release' version '2.6.0'
+    id "com.jfrog.bintray" version "1.8.4"
+}
+
+group 'globalkinetic_test'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version = '1.0'
+
+description = 'Allure Rest-assured' //Allure settings
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "https://dl.bintray.com/epam/reportportal"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'com.jfrog.bintray'
+apply plugin:  'net.researchgate.release'
+apply plugin: 'io.qameta.allure' //Allure settings
+apply plugin: 'build-dashboard' //Allure settings
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["src"]
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test/java/'
+        }
+        resources {
+            srcDir '/src/main/resources'
+        }
+    }
+}
+
+configurations {
+    agent
+}
+
+configurations.all {
+    exclude module: 'logback-classic'
+    exclude module: 'slf4j-log4j12'  //To remove "SLF4J: Class path contains multiple SLF4J bindings." error message
+}
+
+test {
+
+    testLogging {
+        showStandardStreams = true
+    }
+}
+
+allure {  //Allure settings
+    version = '2.2.1'
+    autoconfigure = true
+    aspectjweaver = true
+    allureJavaVersion = '2.0-BETA12'
+}
+
+dependencies {
+    //Allure Report
+    agent "org.aspectj:aspectjweaver:1.8.10"
+    compile "io.qameta.allure:allure-testng:2.0-BETA10"
+    compile group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.6.0'
+
+    //Allure utils
+    compile 'io.rest-assured:rest-assured:3.0.2'
+    compile 'org.freemarker:freemarker'
+    compile 'commons-io:commons-io'
+    compile 'org.apache.commons:commons-lang3'
+    compile group: 'ru.yandex.qatools.allure', name: 'allure-report-data', version: '1.5.4'
+    compile 'ru.yandex.qatools.allure:allure-java-annotations:1.3.9' //Allure Java Annotations
+    testCompile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0.RC4+" //Allure TestNG Adaptor
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile("org.assertj:assertj-core")
+
+    //ANTLR StringTemplate
+    compile group: 'org.antlr', name: 'stringtemplate', version: '4.0.2'
+
+    //Apache
+    compile 'org.apache.directory.studio:org.apache.commons.lang:2.6+' //Apache Commons Lang
+    compile 'org.apache.directory.studio:org.apache.commons.codec:1.8+' //Apache Commons Codec
+
+    //Apache POI
+    compile group: 'org.apache.poi', name: 'poi', version: '4.0.0' //To read files from excel sheets
+    compile group: 'org.apache.poi', name: 'poi', version: '4.0.1'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '4.0.1'
+    compile group: 'org.apache.poi', name: 'poi', version: '4.0.1'
+    compile group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.0.1'
+
+    //Apache HttpClient
+    compile 'org.apache.httpcomponents:httpclient:4.3.1'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.1'
+
+    //Apache Commons Exec
+    compile 'org.apache.commons:commons-exec:1.0.1+'
+    compile 'org.apache.directory.studio:org.apache.commons.lang:2.6+'
+    compile 'org.apache.directory.studio:org.apache.commons.codec:1.8+'
+
+    //Checkstyle (for static code analysis)
+    compile group: 'com.puppycrawl.tools', name: 'checkstyle', version: '8.18'
+
+    //CSV Reader
+    compile "org.apache.commons:commons-csv:1.5"
+
+    //Google API
+    compile group: 'com.google.api-client', name: 'google-api-client', version: '1.30.2'
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile group: 'com.google.oauth-client', name: 'google-oauth-client', version: '1.30.1'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-sheets:v4-rev516-1.23.0'
+    compile group: 'com.google.apis', name: 'google-api-services-compute', version: 'v1-rev214-1.25.0'
+    compile group: 'com.google.guava', name: 'guava', version: '28.0-jre'
+    compile group: 'com.google.gdata', name: 'core', version: '1.47.1' //Google Data Java Client Library
+
+    //Groovy
+    compile localGroovy()
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.7', ext: 'pom'
+
+    //Groovy
+    compile localGroovy()
+
+    //GSON
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.8.5'
+    testCompile "com.google.code.gson:gson:2.2.4"
+
+    //Hamcrest
+    compile group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+    testCompile 'org.hamcrest:hamcrest-all:1.3'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+
+    //Java Client
+    compile group: 'io.appium', name: 'java-client', version: '7.3.0' //Works with Appium
+
+    //Jcraft
+    compile group: 'com.jcraft', name: 'jsch', version: '0.1.55' //To access remote machine
+
+    //JAXB API
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+
+    //JSON
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+    compile 'org.json:json:20140107'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    compile group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
+    compile group: 'org.json', name: 'json', version: '20170516'
+    compile group: 'org.immutables', name: 'gson', version: '2.7.5'
+
+    //Jackson Databind
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+
+    //Jxl (JExcelApi)
+    compile group: 'net.sourceforge.jexcelapi', name: 'jxl', version: '2.6.12' //To read, write, and modify Microsoft Excel spreadsheets
+
+    //JUnit
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'org.slf4j:slf4j-log4j12:1.7.25'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.4.0'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.4.0'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.4.0'
+    testCompile 'org.slf4j:slf4j-simple:1.7+'
+
+    //Lint Checks(for static code analysis)
+    compile group: 'com.android.tools.lint', name: 'lint-checks', version: '25.3.0'
+    testCompile group: 'com.android.tools.lint', name: 'lint-tests', version: '25.3.0'
+
+    //Logback Classic Module(ReportPortal logback logger dependency)
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.3.0-alpha4'
+
+    //Logger Java Logback(ReportPortal logback logger dependency)
+    compile group: 'com.epam.reportportal', name: 'logger-java-logback', version: '4.0.0'
+
+    //Logger Java Log4j
+    compile group: 'com.epam.reportportal', name: 'logger-java-log4j', version: '4.0.1'
+
+    //MessageFormat
+    compile group: 'org.webjars.bower', name: 'messageformat', version: '1.0.2'
+    compile group: 'org.webjars.bower', name: 'github-com-yahoo-intl-messageformat', version: '1.3.0'
+    compile group: 'org.webjars.bowergithub.yahoo', name: 'intl-messageformat-parser', version: '1.2.0'
+
+    //Rest Assured
+    compile 'io.rest-assured:rest-assured:3.0.3'
+    testCompile group: 'com.jayway.restassured', name: 'rest-assured', version: '1.6'
+    testCompile group: 'com.jayway.jsonpath', name: 'json-path-assert', version: '2.4.0'
+
+    //Selenium
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
+    compile group: 'org.openqa.selenium', name: 'selenium', version: '0.8.1', ext: 'pom' //to get cookies
+
+    //Selenium Browsers
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '2.53.1'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '2.53.1'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '2.53.1'
+
+    //Selenium Browsers
+    compile group:  'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '2.53.1'
+    compile group:  'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '2.53.1'
+    compile group:  'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '2.53.1'
+
+    //Selenium WebDriverManager as Java dependency
+    testCompile("io.github.bonigarcia:webdrivermanager:3.0.0")
+
+    //TestNG
+    compile 'org.testng:testng:6.11'
+    compile 'org.testng:testng:6.14.3'
+    compile 'org.assertj:assertj-core:3.8.0'
+    testCompile("org.assertj:assertj-core")
+    testCompile 'org.assertj:assertj-core:3.4+'
+
+    //All necessary dependencies for RestAssured TestNG and ReportPortal integration
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.3.0-alpha4' //Logback Classic Module
+    testCompile 'com.google.inject:guice:4.1.0'
+    compile group: 'com.typesafe.play', name: 'play-json_2.12', version: '2.7.2'
+    testCompile group: 'org.skyscreamer', name: 'jsonassert', version: '1.5.0'
+}
+
+tasks.withType(Test) {
+    systemProperty 'allure.results.directory', 'build/allure-results' //Allure settings
+    gradle.startParameter.continueOnFailure = true
+    systemProperties = System.getProperties()
+    testLogging.events "started", "passed", "skipped", "failed", "standardOut", "standardError"
+    System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
+    testLogging.exceptionFormat "full"
+    testLogging.showStandardStreams = true
+}
+
+task run_xml_test(type: Test) {
+    //web
+    systemProperties['BROWSER'] = 'Firefox' //OR 'Chrome'
+    //mobile
+    systemProperties['DEVICE'] = 'emulator'
+    systemProperties['HOST'] = '0.0.0.0'
+    systemProperties['OS'] = 'Android'
+    useTestNG() {
+        useDefaultListeners = true
+        suites "src/test/java/testSuites/taskThree.xml" //When we want to execute .xml file as test Suites
+    }
+}
+
+task run_test(type: Test) {
+    //web
+    systemProperties['BROWSER'] = 'Firefox' //OR 'Chrome'
+    //mobile
+    systemProperties['DEVICE'] = 'emulator'
+    systemProperties['HOST'] = '0.0.0.0'
+    systemProperties['OS'] = 'Android'
+    useTestNG() {
+        useDefaultListeners = true
+        suiteName 'Global Kinetic Assessment - Task 1, Task 2 & Task 3'
+        filter {
+            includeTestsMatching "TaskOneTest" //When we want to execute java classes as test Suites
+            includeTestsMatching "TaskTwoTest"
+            includeTestsMatching "TaskThreeTest"
+        }
+    }
+}
